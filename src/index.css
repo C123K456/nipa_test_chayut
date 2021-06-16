@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +12,258 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #F5F5F5;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.camera {
+  align-items: center;
+  margin-top: 1rem;
+  
+}
+
+.camera_steam {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 2rem;
+}
+
+.result {
+  
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: 0.4s;
+}
+
+.result.hasPhoto {
+  left: 0;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  background-image: linear-gradient(to 
+  right, #364F6B 50%, #FC5185 50%);
+  background-position: 0%;
+  background-size: 200%;
+  color: #FFF;
+  transition: 0.4s;
+  cursor: pointer;
+  margin: 1rem;
+  width: 150px;
+}
+
+button:hover {
+  background-position: 100%;
+}
+
+.image_frame {
+  position: relative;
+}
+
+.image_img {
+  width: 720px;
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  
+  top: 10px;
+  left: 0;
+  
+  width: 100%; 
+  height: 100%;
+  background: rgb(0, 0, 0, 0.6);
+  border-color: red;
+  border-style: solid;
+  z-index: 10;
+}
+
+.myCanvas {
+  position: relative;
+  border: 5px;
+  border-style: solid;
+  border-color: #364F6B;
+}
+
+h1 {
+  color: #364F6B;
+}
+
+h3 {
+  color: #364F6B;
+}
+
+.listdetect {
+  color: #364F6B;
+  margin-top: 10px;
+  
+}
+
+.navbar {
+  background: #364F6B;
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  position: relative;
+  
+}
+
+.icon-navbar {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  left: 20px;
+}
+
+.upload_page {
+  align-items: stretch;
+  margin-top: 2rem;
+
+}
+
+.canvas_field {
+  align-items: center;
+}
+
+.input_field {
+  align-items: center;
+  margin: 1rem;
+}
+
+.button-wrapper {
+  position: relative;
+  width: 150px;
+  text-align: center;
+  margin: auto;
+}
+
+.button-wrapper span.label {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  width: 100%;
+  background: #3FC1C9;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px 0;
+  text-transform:uppercase;
+  font-size:12px;
+}
+
+#upload {
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.header_page {
+  margin-bottom: 1rem;
+}
+
+.analyzed {
+  text-align: center;
+  margin: auto 20%;
+  
+}
+
+.results_box {
+  margin: 1rem;
+  padding: 1rem;
+  background: #e4e3e3;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #364F6B;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .myCanvas {
+    position: relative;
+    border: 5px;
+    border-style: solid;
+    border-color: #364F6B;
+    width: 100%;
+  }
+}
+
+
+
+
+

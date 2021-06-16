@@ -38,32 +38,4 @@
   }
 }
 
-.image_frame {
-  position: relative;
-}
 
-.image_img {
-  width: 720px;
-  display: none;
-}
-
-.overlay {
-  position: absolute;
-  
-  top: 10px;
-  left: 0;
-  
-  width: 100%; 
-  height: 100%;
-  background: rgb(0, 0, 0, 0.6);
-  border-color: red;
-  border-style: solid;
-  z-index: 10;
-}
-
-.myCanvas {
-  position: relative;
-  
-  border: 5px;
-  border-style: solid;
-}
