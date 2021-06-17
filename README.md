@@ -1,7 +1,6 @@
-# Getting Started with Create React App
+# Nvision with React.js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+Demo link: https://hungry-edison-bcf6ba.netlify.app/
 ## Available Scripts
 
 In the project directory, you can run:
