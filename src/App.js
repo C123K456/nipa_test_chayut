@@ -94,8 +94,8 @@ function App() {
       />
       <Analyzed boundingBox={boundingBox}/>
       <hr></hr>
-      <CameraTakePhoto handleTakePhoto={handleTakePhoto} cameraOn={cameraOn} 
-      cameraOff={cameraOff} OpenCamera={OpenCamera}/>
+      <CameraTakePhoto onHandleTakePhoto={handleTakePhoto} onCameraOn={cameraOn} 
+      onCameraOff={cameraOff} OpenCamera={OpenCamera}/>
     </div>
   );
 }
